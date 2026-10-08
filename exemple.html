@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="PalierAPI, un projet de veille Shopify en français. Essai accompagné gratuit pour les agences."><title>Un bref de la semaine du 5 octobre 2026 · PalierAPI</title><link rel="stylesheet" href="style.css"></head>
+<body><nav aria-label="Navigation"><a href="index.html">PalierAPI</a><a href="exemple.html">Exemple de bref</a><a href="essai.html">Essai gratuit</a></nav><main><h1>Un bref de la semaine du 5 octobre 2026</h1>
+<p class="note">Annonces Shopify réelles publiées le 7 octobre, consultées le 8 octobre 2026. Exemple relu pour un périmètre fictif : app publique, Admin GraphQL et Customer Account API, sans POS. La présence de ces API ne prouve pas l'usage de chaque fonction.</p>
+<h2>Comptes clients : vérifier la gestion des limitations</h2>
+<p>La Customer Account API applique une limite de 3 000 requêtes par minute, par client et par boutique, partagée entre les apps. Une réponse 429 fournit un délai Retry-After.</p>
+<p><strong>À vérifier :</strong> votre logique de reprise attend-elle ce délai avant de réessayer ? Testez une réponse 429 simulée et vérifiez que les tentatives restent espacées. Shopify indique que le trafic habituel ne nécessite généralement pas de modification ; aucune échéance future distincte n'est annoncée.</p>
+<p><a href="https://shopify.dev/changelog/posts/per-customer-request-limit-for-the-customer-account-api">Source Shopify du 7 octobre</a>.</p>
+<h2>Droits d'accès : une option à étudier, pas une migration obligatoire</h2>
+<p>À partir de l'API Admin GraphQL 2027-01, appDowngradeAccessScopes permet à certaines apps utilisant l'installation gérée par Shopify de remplacer des droits optionnels d'écriture par les droits de lecture correspondants.</p>
+<p><strong>Décision :</strong> aucun changement imposé aux apps existantes. Si votre app n'a plus besoin d'écrire, vérifier son mode d'installation et ses droits optionnels avant d'envisager cette API dans la version 2027-01. Ne pas traiter cette nouveauté comme une obligation sur votre version actuelle.</p>
+<p><a href="https://shopify.dev/changelog/posts/downgrade-app-access-scopes-from-write-to-read">Source Shopify du 7 octobre</a>.</p>
+<h2>Ce qui est écarté de cet exemple</h2>
+<p>L'annonce sur les mutations du panier POS en 2026-10 concerne les extensions POS. Le profil fictif n'en maintient pas : elle n'est pas transformée en tâche pour cette agence. <a href="https://shopify.dev/changelog/posts/cart-mutations-reject-unconfirmed-writes-in-pos-ui-extensions-2026-10">Source Shopify</a>.</p>
+<p>Pour votre essai, le périmètre et les actions seront relus avec vous. <a href="essai.html">Demander les deux brefs gratuits</a>.</p></main><footer>Sylvain Herbin · Projet en phase de test · Aucun paiement<br><a href="confidentialite.html">Données et droits</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="desinscription.html">Arrêter les messages</a></footer></body></html>
