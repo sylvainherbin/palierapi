@@ -4,7 +4,7 @@
 <p class="note">Annonces Shopify réelles publiées le 7 octobre, consultées le 8 octobre 2026. Exemple relu pour un périmètre fictif : app publique, Admin GraphQL et Customer Account API, sans POS. La présence de ces API ne prouve pas l'usage de chaque fonction.</p>
 <h2>Comptes clients : vérifier la gestion des limitations</h2>
 <p>La Customer Account API applique une limite de 3 000 requêtes par minute, par client et par boutique, partagée entre les apps. Une réponse 429 fournit un délai Retry-After.</p>
-<p><strong>À vérifier :</strong> votre logique de reprise attend-elle ce délai avant de réessayer ? Testez une réponse 429 simulée et vérifiez que les tentatives restent espacées. Shopify indique que le trafic habituel ne nécessite généralement pas de modification ; aucune échéance future distincte n'est annoncée.</p>
+<p><strong>À vérifier :</strong> votre logique de reprise attend-elle ce délai avant de réessayer ? Testez une réponse 429 simulée et vérifiez que les tentatives restent espacées. Shopify indique que le trafic habituel ne nécessite généralement pas de modification ; la limite est déjà en vigueur depuis le 7 octobre 2026, sans échéance future distincte.</p>
 <p><a href="https://shopify.dev/changelog/posts/per-customer-request-limit-for-the-customer-account-api">Source Shopify du 7 octobre</a>.</p>
 <h2>Droits d'accès : une option à étudier, pas une migration obligatoire</h2>
 <p>À partir de l'API Admin GraphQL 2027-01, appDowngradeAccessScopes permet à certaines apps utilisant l'installation gérée par Shopify de remplacer des droits optionnels d'écriture par les droits de lecture correspondants.</p>
